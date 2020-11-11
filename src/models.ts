@@ -1,6 +1,7 @@
 export interface User {
-  userId: number;
+  id: number;
   email: string;
+  pwhash: string;
 }
 
 export interface Vacancy {
