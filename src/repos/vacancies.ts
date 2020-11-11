@@ -86,7 +86,10 @@ export class VacanciesRepository {
     return this.db.none(query);
   }
   async getUnparsedUrls(urls: Array<string>): Promise<Array<string>> {
-    const qvalues = this.pgp.helpers.values(urls, ["url"]);
-    return this.db.any(vacancies.getUnparsedUrls, qvalues);
+    let keyed: Array<{ url: string }> = urls.map((url) => ({ url: url }));
+    const qvalues = this.pgp.helpers.values(keyed, ["url"]);
+    return this.db
+      .any(vacancies.getUnparsedUrls, qvalues)
+      .then((unparsed) => unparsed.map((url) => url.url));
   }
 }
