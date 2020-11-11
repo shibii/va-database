@@ -33,4 +33,5 @@ const db: ExtendedProtocol = pgp({
   password: process.env.DB_PASSWORD,
 });
 
+export { User, Vacancy } from "./models";
 export { db, pgp };
