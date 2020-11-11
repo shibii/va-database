@@ -1,6 +1,3 @@
-import * as path from "path";
-import * as dotenv from "dotenv";
-dotenv.config({ path: path.join(__dirname, ".env") });
 import * as pgPromise from "pg-promise";
 import { IInitOptions, IDatabase, IMain } from "pg-promise";
 import { IExtensions, UsersRepository, VacanciesRepository } from "./repos";
