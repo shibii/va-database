@@ -111,7 +111,7 @@ var VacanciesRepository = /** @class */ (function () {
             });
         });
     };
-    VacanciesRepository.prototype.getUnparserUrls = function (urls) {
+    VacanciesRepository.prototype.getUnparsedUrls = function (urls) {
         return __awaiter(this, void 0, void 0, function () {
             var qvalues;
             return __generator(this, function (_a) {

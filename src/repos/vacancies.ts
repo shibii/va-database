@@ -85,7 +85,7 @@ export class VacanciesRepository {
       " ON CONFLICT DO NOTHING";
     return this.db.none(query);
   }
-  async getUnparserUrls(urls: Array<string>): Promise<Array<string>> {
+  async getUnparsedUrls(urls: Array<string>): Promise<Array<string>> {
     const qvalues = this.pgp.helpers.values(urls, ["url"]);
     return this.db.any(vacancies.getUnparsedUrls, qvalues);
   }

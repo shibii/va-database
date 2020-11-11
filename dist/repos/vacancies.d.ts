@@ -14,5 +14,5 @@ export declare class VacanciesRepository {
         contents: string;
         source: string;
     }>): Promise<null>;
-    getUnparserUrls(urls: Array<string>): Promise<Array<string>>;
+    getUnparsedUrls(urls: Array<string>): Promise<Array<string>>;
 }
