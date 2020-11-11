@@ -1,3 +1,3 @@
 # va-database
 
-typescript version of the backend for vacancy-aggregator project
+typescript version of the database interface for vacancy-aggregator
