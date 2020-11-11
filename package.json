@@ -7,6 +7,17 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shibii/va-database.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shibii/va-database/issues"
+  },
+  "homepage": "https://github.com/shibii/va-database#readme",
+  "keywords": [
+    "vacancy-aggregator"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,10 +25,10 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "pg-promise": "^10.7.3",
-    "typescript": "^4.0.5"
+    "pg-promise": "^10.7.3"
   },
   "devDependencies": {
+    "typescript": "^4.0.5",
     "@types/node": "^14.14.7"
   }
 }
