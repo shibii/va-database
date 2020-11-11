@@ -113,10 +113,13 @@ var VacanciesRepository = /** @class */ (function () {
     };
     VacanciesRepository.prototype.getUnparsedUrls = function (urls) {
         return __awaiter(this, void 0, void 0, function () {
-            var qvalues;
+            var keyed, qvalues;
             return __generator(this, function (_a) {
-                qvalues = this.pgp.helpers.values(urls, ["url"]);
-                return [2 /*return*/, this.db.any(sql_1.vacancies.getUnparsedUrls, qvalues)];
+                keyed = urls.map(function (url) { return ({ url: url }); });
+                qvalues = this.pgp.helpers.values(keyed, ["url"]);
+                return [2 /*return*/, this.db
+                        .any(sql_1.vacancies.getUnparsedUrls, qvalues)
+                        .then(function (unparsed) { return unparsed.map(function (url) { return url.url; }); })];
             });
         });
     };

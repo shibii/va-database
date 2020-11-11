@@ -1,9 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.pgp = exports.db = void 0;
-var path = require("path");
-var dotenv = require("dotenv");
-dotenv.config({ path: path.join(__dirname, ".env") });
 var pgPromise = require("pg-promise");
 var repos_1 = require("./repos");
 var initOptions = {
