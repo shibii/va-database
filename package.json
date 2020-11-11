@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "database interface for vacancy-aggregator",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
